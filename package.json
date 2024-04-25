@@ -1,4 +1,7 @@
 {
   "name": "javascript-ast",
-  "description": "JavaScript AST"
+  "description": "JavaScript AST",
+  "dependencies": {
+    "esprima": "^4.0.1"
+  }
 }
