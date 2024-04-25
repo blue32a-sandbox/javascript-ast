@@ -1,1 +1,1 @@
-# javascript-ast
+# JavaScript AST
