@@ -1,5 +1,6 @@
 const esprima = require('esprima');
 const estraverse = require('estraverse');
+const escodegen = require('escodegen');
 
 const ast = esprima.parseScript(`
 const answer = 1 + 2;
@@ -24,3 +25,8 @@ estraverse.traverse(ast, {
     console.log(' '.repeat(depth) + '- leave: ' + node.type);
   }
 });
+
+const code = escodegen.generate(ast);
+console.log(code);
+
+eval(code);
